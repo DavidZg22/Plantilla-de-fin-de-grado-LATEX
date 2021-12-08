@@ -1,0 +1,181 @@
+{
+	// Letras de tipografía matemáticas
+	"\\mathbb{R}": {
+		"prefix": "Letra_matematica",
+		"body": [
+			"$\\mathbb{$1}$"
+		],
+		"description": "Tipografía matemática letras"
+	},
+
+	// Ambiente de figura centrado
+	"FigurePro": {
+		"prefix": "figure",
+		"body": [
+			"\\begin{figure}[h!]",
+			"    \\centerline{\\includegraphics[width=$1\\textwidth]{img/$2}}",
+			"    \\caption{$3}",
+			"    \\label{$4}",
+			"\\end{figure}"
+		],
+		"description": "Formato insertar figura"
+	},
+
+	// Ambiente de Background
+	"Background":{
+		"prefix": "background",
+		"body": [
+			"\\usebackgroundtemplate{\\includegraphics[width = \\paperwidth]{img/$1}}"
+		],
+		"description": "Background"
+	},
+
+	// Ambiente de frame
+	"Frame":{
+		"prefix": "frame",
+		"body": [
+			"\\begin{frame}{$1}",
+				"$2",
+			"\\end{frame}"
+		],
+		"description": "frame"
+	},
+
+	// Dos columnas en Beamer
+	"Two_columns":{
+		"prefix": "two_columns",
+		"body": [
+			"\\begin{frame}{$1}",
+			"\\begin{columns}",
+			"    \\column{$2\\textwidth}",
+			"    $3",
+			"    \\column{$4\\textwidth}",
+			"    $4",
+			"\\end{columns}",
+			"\\end{frame}"
+		],
+		"description": "Doble columna en Beamer"
+	},
+
+	// Atajos de CÁLCULO
+	"integrate":{
+		"prefix": "integrate",
+		"body": [
+			"\\int_{$1}^{$2} $3 d$4"
+		],
+		"description": "Integral"
+	},
+	"diferential01":{
+		"prefix": "derivate_1",
+		"body": [
+			"\\frac{d}{d$1} \\left[ $2 \\right]"
+		],
+		"description": "Diferential first grade"
+	},
+	"diferential02":{
+		"prefix": "derivate_2",
+		"body": [
+			"\\frac{d^2}{d$1^2} \\left[ $2 \\right]"
+		],
+		"description": "Diferential second grade"
+	},
+	"braket":{
+		"prefix": "braket",
+		"body": [
+			"\\langle $1 | $2\\rangle"
+		],
+		"description": "Braket"
+	},
+	"bra":{
+		"prefix": "bra",
+		"body": [
+			"\\langle $1 |"
+		],
+		"description": "Bra"
+	},
+	"ket":{
+		"prefix": "ket",
+		"body": [
+			"| $1 \\rangle"
+		]
+	},
+
+
+	// Delimitadores
+	"llaves":{
+		"prefix": "llave",
+		"body": [
+			"\\biggl\\{ $1 \\biggr\\\\}"
+		],
+		"description": "Llaves"
+	},
+	"parentesis":{
+		"prefix": "parentesis",
+		"body": [
+			"\\Biggl( $1 \\Biggr)"
+		],
+		"description": "Parentesis"
+	},
+
+	//Ambientes de atajos más rapidos
+	"equation":{
+		"prefix": "equation",
+		"body": [
+			"\\begin{equation}",
+			"    $1",
+			"\\end{equation}"
+		]
+	},
+	"item":{
+		"prefix": "items_mio",
+		"body": [
+			"\\begin{itemize}",
+			"    \\item $1",
+			"    \\item $2",
+			"    \\item $3",
+			"    \\item $4",
+			"\\end{itemize}"
+		],
+		"description": "Items"
+	},
+	"equation_alineado":{
+		"prefix": "aligned_ecuacion",
+		"body": [
+			"\\begin{align*}",
+			"    $1 &= $2 \\\\\\",
+			"    $3 &= $4 ",
+			"\\end{align*}"
+		],
+		"description": "Ambiente de alineación de ecuaciones"
+	},
+	"f_various_intervals":{
+		"prefix": "f_various_intervals",
+		"body": [
+			"\\begin{equation}",
+			"    $1 = \\left\\{\\begin{array}{rl}",
+			"        $2 ~,",
+			"            & \\text{si} ~ $3 \\\\\\",
+			"        $4 ~,",
+			"            & \\text{si} ~ $4",
+			"        \\end{array}\\\\right.",   
+			"\\end{equation}"
+		],
+		"description": "Funtion at various intervals"
+	},
+
+
+
+	// Información del trabajo
+	"author":{
+		"prefix": "author",
+		"body": [
+			"David Brandon Zevallos Garay"
+		]
+	},
+	"universidad":{
+		"prefix": "university",
+		"body": [
+			"Universidad Nacional Federico Villarreal"
+		]
+	}
+}
