@@ -1,0 +1,84 @@
+\documentclass[12pt,a4paper, openany, onecolumn]{book}
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\usepackage{color}
+\usepackage{titlesec}
+	\titleformat{\chapter}{\Huge\bfseries}{\filcenter\small \ CAPÍTULO \thechapter \ \newline}{7pt}{\large\bfseries\filcenter}
+	\titleformat{\section}[runin]{\scshape\bf}{\thesection.}{2pt}{\color{black}}[.\quad \vspace{6pt}\\]
+	\titleformat{\subsection}[runin]{\scshape\bf}{\normalsize\hspace{7pt}\thesubsection}{2pt}{\color{black}}[.\quad \vspace{6pt} \\]
+	\titleformat{\subsubsection}[runin]{\scshape\bf}{\normalsize\hspace{14pt}\thesubsubsection}{2pt}{\color{black}}[.\quad \vspace{6pt} \\]
+	
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\author{David}
+\title{Probando}
+
+
+\begin{document}
+\pagestyle{plain}
+\include{Portada/Portada}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%% DEDICATORIA
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\thispagestyle{empty}
+	\begin{flushright}
+	\begin{minipage}[t]{0.5\textwidth}
+	\vspace{12cm}
+	{\large \bf Dedicatoria:}\par
+	A mis padres y hermana, por aguantar las noches interminables de fastidio.
+	\end{minipage}
+	\end{flushright}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\frontmatter
+\include{Capitulos/Preambulo}
+\newpage
+\renewcommand{\contentsname}{Indice}
+\tableofcontents
+\renewcommand{\chaptername}{Capítulo}
+\renewcommand{\thechapter}{\arabic{chapter}}
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+
+\newpage
+\renewcommand{\listfigurename}{Indice de figuras}
+\addcontentsline{toc}{section}{\listfigurename}
+\listoffigures
+\renewcommand{\figurename}{\textit Figura}
+\renewcommand{\thefigure}{\arabic{figure}}
+
+\newpage
+\renewcommand{\listtablename}{Indice de tablas}
+\addcontentsline{toc}{section}{\listtablename}
+\listoftables
+\renewcommand{\tablename}{\textit Tabla}
+\renewcommand{\thetable}{\arabic{table}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%% CAPÍTULOS
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+\include{Capitulos/Introduccion}
+\include{Capitulos/Marco_teorico}
+\include{Capitulos/Metodo}
+\include{Capitulos/Resultados}
+\include{Capitulos/Discusion_de_resultados}
+\include{Capitulos/Conclusiones}
+
+\backmatter
+\include{Capitulos/Referencias}
+
+\include{Capitulos/Apendice}
+\end{document}
